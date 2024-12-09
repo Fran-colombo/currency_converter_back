@@ -30,6 +30,7 @@ namespace Currency_converter.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy = "UnauthorizeIfUser")]
         public IActionResult Add([FromBody] UserForCreationDto userDto)
         {
             try
@@ -60,7 +61,8 @@ namespace Currency_converter.Controllers
             }
         }
 
-        [HttpDelete("{username}")] 
+        [HttpDelete("{username}")]
+        [Authorize(Roles = "Admin")]
         public IActionResult DeleteUser([FromRoute] string username) 
         {
             try

@@ -35,11 +35,10 @@ namespace Services.Implementations
         public void DeleteUser(string username)
         {
             var user = _context.Users.FirstOrDefault(u => u.Username == username);
-            if (user != null)
-            {
+
                 _context.Remove(user);
                 _context.SaveChanges();
-            }
+            
         }
     
 
@@ -51,35 +50,24 @@ namespace Services.Implementations
 
         public User? GetUserById(int id)
         {
-            try
-            {
-                return _context.Users.Include(u => u.Subscription).FirstOrDefault(u => u.Id == id);
-            }
-            catch (Exception ex)
-            {
-                throw new ArgumentException("There is sth wrong in your code");
-            }
+
+          return _context.Users.Include(u => u.Subscription).FirstOrDefault(u => u.Id == id);
+     
         }
         public User? GetUserByUsername(string username)
         {
-            try
-            {
-                return _context.Users.Include(u => u.Subscription).FirstOrDefault(u => u.Username == username);
-            }
-            catch (Exception ex)
-            {
-                throw new ArgumentException("There is sth wrong in your code");
-            }
+            
+          return _context.Users.Include(u => u.Subscription).FirstOrDefault(u => u.Username == username);
+
         }
 
         public string UpdateUserSub(string username, int idSub) {
             var userToUpdate = _context.Users.FirstOrDefault(u => u.Username == username);
-            if (userToUpdate != null) { 
-                userToUpdate.SubscriptionId = idSub;
-                _context.SaveChanges();
-                return username;
-            }
-            throw new ArgumentException("You weren´t able to update user´s subscription type");            
+
+            userToUpdate.SubscriptionId = idSub;
+            _context.SaveChanges();
+            return username;
+          
             
         
         }

@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Common.Enum;
+using Common.Exceptions;
 using Common.Models;
 using Data.Entities;
 using Data.Repositories.Interfaces;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Services.Interfaces;
 
 namespace Services.Implementations
@@ -26,91 +28,157 @@ namespace Services.Implementations
 
             public void AddUser(UserForCreationDto userDto)
             {
-                
-                if (!_repository.GetAllUsers().Any(u => u.Username == userDto.Username))
+            User? user = _repository.GetAllUsers().FirstOrDefault(u => u.Username == userDto.Username);
+            var email = _repository.GetAllUsers().FirstOrDefault(u => u.Email == userDto.Email)?.Email;
+
+            if ((user == null) & (email == null))
+            {
+
+                var subscription = _subRepo.GetSubscriptionByType(userDto.Subscription);
+                if (subscription != null)
                 {
-                    
-                    var subscription = _subRepo.GetSubscriptionByType(userDto.Subscription);
-                    if (subscription == null)
-                    {
-                        throw new ArgumentException("Subscription not found");
+                    try {
+                        var newUser = new User
+                        {
+                            Username = userDto.Username,
+                            Password = userDto.Password,
+                            confirmPassword = userDto.confirmPassword,
+                            Email = userDto.Email,
+                            Subscription = _subRepo.GetSubscriptionByType(userDto.Subscription)!
+                        };
+
+                        _repository.CreateUser(newUser);
                     }
-
-                    
-                    var newUser = new User
-                    {
-                        Username = userDto.Username,
-                        Password = userDto.Password,
-                        confirmPassword = userDto.confirmPassword,
-                        Email = userDto.Email,
-                        Subscription = _subRepo.GetSubscriptionByType(userDto.Subscription)!
-                    };
-
-                    _repository.CreateUser(newUser);
+                    catch (Exception ex) {
+                        throw new NotAbleCreateUser("Something went wrong while you tried to create the user");
+                    }
                 }
-                else
+                else 
                 {
-                    throw new ArgumentException("The username already exists");
-                }
+                    throw new SubscriptionIdNotFoundException("Subscription not found");
+                } 
+            }
+            else if (email != null)
+            {
+                throw new EmailAlreadyExistException("The email you submited already exist.");
+
+            }
+            else
+            {
+                    throw new UserAlreadyExistException("The username already exists");
+            }
             }
 
 
         public string UpdateUserSub(string username, int subId)
         {
-            _repository.UpdateUserSub(username, subId);
-            return username;
+            var userToUpdate = _repository.GetUserByUsername(username);
+            if (userToUpdate != null)
+            {
+                try
+                {
+                    _repository.UpdateUserSub(username, subId);
+                    return username;
+                }
+                catch (Exception ex)
+                {
+                    throw new FailUpdatingUserException("Something went wrong while ypu tried to update the user subscription");
+                }
+            }
+            else
+            {
+                throw new UserNotFoundException("The user you are looking for doesn´t exist");
+            }
 
         }
         public IEnumerable<UserDto> GetUsers()
         {
-            return _repository.GetAllUsers().Select
-                (u => new UserDto
-                {
-                    Username = u.Username,
-                    Email = u.Email,
-                    Subscription = new SubscriptionDto
+            try
+            {
+                return _repository.GetAllUsers().Select
+                    (u => new UserDto
                     {
-                        Id = u.Subscription.Id,
-                        SubscriptionType = u.Subscription.SubscriptionType,
-                        MaxConversions = u.Subscription.MaxConversions
+                        Username = u.Username,
+                        Email = u.Email,
+                        Subscription = new SubscriptionDto
+                        {
+                            Id = u.Subscription.Id,
+                            SubscriptionType = u.Subscription.SubscriptionType,
+                            MaxConversions = u.Subscription.MaxConversions
                         },
-                    Conversions = u.conversions,
-                    Role = u.Role
+                        Conversions = u.conversions,
+                        Role = u.Role
                     }).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new UsersNotFoundException("We couldn´t get the users.");
+            }
         }
 
 
         public User? GetUserById(int id)
         {
+            try
+            {
             return _repository.GetUserById(id);
+            }
+            catch (Exception ex)
+            {
+                throw new UserNotFoundException("There is sth wrong in your code");
+            }
         }
          public UserDto? GetUserByUsername(string username)
         {
             var user = _repository.GetUserByUsername(username);
-            if (user == null)
+            if (user != null)
             {
-                throw new ArgumentException("user not found");
-            }
-            var newUser = new UserDto
-            {
-                Username = user.Username,
-                Email = user.Email,
-                Subscription = new SubscriptionDto
+                try
                 {
-                    Id = user.Subscription.Id,
-                    SubscriptionType = user.Subscription.SubscriptionType,
-                    MaxConversions = user.Subscription.MaxConversions
-                },
-                Conversions = user.conversions,
-                Role = user.Role
-            };
-            return newUser;
+                    var newUser = new UserDto
+                    {
+                        Username = user.Username,
+                        Email = user.Email,
+                        Subscription = new SubscriptionDto
+                        {
+                            Id = user.Subscription.Id,
+                            SubscriptionType = user.Subscription.SubscriptionType,
+                            MaxConversions = user.Subscription.MaxConversions
+                        },
+                        Conversions = user.conversions,
+                        Role = user.Role
+                    };
+                    return newUser;
 
+                }
+                catch (Exception ex)
+                {
+                    throw new UserNotFoundException("Something went wrong when we tried to find the user");
+                }
+            }
+            else
+            {
+                throw new UserNotFoundException("user not found");
+            }
         }
 
         public void DeleteUser(string username)
         {
-            _repository.DeleteUser(username);
+            var user = _repository.GetUserByUsername(username);
+            if (user != null)
+            {
+                try
+                {
+                    _repository.DeleteUser(username);
+                }
+                catch (Exception ex)
+                {
+                    throw new NotAbleDeleteUser("Something went wrong while we tried to delete the user");
+                }
+            }
+            else{
+                throw new UserNotFoundException("The user you are looking for doesn´t exist"); 
+            }
         }
 
         public User? AuthenticateUser(CredentialsToAuthenticateDto credentials)

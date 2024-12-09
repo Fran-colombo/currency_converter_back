@@ -19,6 +19,16 @@ builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.WriteIndented = true;
     options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
 });
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("UnauthorizeIfUser", policy =>
+    {
+        policy.RequireAssertion(context =>
+        {
+            return !(context.User.Identity?.IsAuthenticated == true && context.User.IsInRole("User"));
+        });
+    });
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(setupAction =>

@@ -294,3 +294,4 @@ C:\Users\Francesco\source\repos\ProyectoFinal\Currency_converter_back\Currency_c
 C:\Users\Francesco\source\repos\ProyectoFinal\Currency_converter_back\Currency_converter\obj\Debug\net8.0\Currency_converter.pdb
 C:\Users\Francesco\source\repos\ProyectoFinal\Currency_converter_back\Currency_converter\obj\Debug\net8.0\Currency_converter.genruntimeconfig.cache
 C:\Users\Francesco\source\repos\ProyectoFinal\Currency_converter_back\Currency_converter\obj\Debug\net8.0\ref\Currency_converter.dll
+C:\Users\Francesco\source\repos\ProyectoFinal\Currency_converter_back\Currency_converter\obj\Debug\net8.0\Currency_converter.sourcelink.json

@@ -20,3 +20,4 @@ C:\Users\Francesco\source\repos\ProyectoFinal\Currency_converter_back\Common\obj
 C:\Users\Francesco\source\repos\ProyectoFinal\Currency_converter_back\Common\obj\Debug\net8.0\refint\Common.dll
 C:\Users\Francesco\source\repos\ProyectoFinal\Currency_converter_back\Common\obj\Debug\net8.0\Common.pdb
 C:\Users\Francesco\source\repos\ProyectoFinal\Currency_converter_back\Common\obj\Debug\net8.0\ref\Common.dll
+C:\Users\Francesco\source\repos\ProyectoFinal\Currency_converter_back\Common\obj\Debug\net8.0\Common.sourcelink.json

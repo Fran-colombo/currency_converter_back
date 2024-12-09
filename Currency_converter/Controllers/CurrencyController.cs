@@ -33,7 +33,7 @@ namespace Currency_converter.Controllers
         }
 
         [HttpPost]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public IActionResult CreateCurrency([FromBody] CurrencyForDto currency)
         {
 
@@ -50,7 +50,7 @@ namespace Currency_converter.Controllers
         }
 
         [HttpPut]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public IActionResult UpdateCurrencyByCode([FromBody] CurrencyUpdateRequestDto request)
         {
             _service.UpdateCurrencyByCode(request.code, request.convertionIndex);

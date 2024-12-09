@@ -1,4 +1,5 @@
 ﻿using Common.Enum;
+using Common.Exceptions;
 using Common.Models;
 using Data.Entities;
 using Data.Repositories.Interfaces;
@@ -39,82 +40,125 @@ namespace Services.Implementations
         {
             if (!_repository.GetActiveCurrencies().Any(e => e.Code == CreationDTO.Code))
             {
-                var newCurrency = _repository.CreateCurrency(
-                new Currency
+                try
                 {
-                    Code = CreationDTO.Code,
-                    Legend = CreationDTO.Legend,
-                    Symbol = CreationDTO.Symbol,
-                    ConvertionIndex = CreationDTO.ConvertionIndex,
-                });
 
-                return newCurrency;
+                    var newCurrency = _repository.CreateCurrency(
+                    new Currency
+                    {
+                        Code = CreationDTO.Code,
+                        Legend = CreationDTO.Legend,
+                        Symbol = CreationDTO.Symbol,
+                        ConvertionIndex = CreationDTO.ConvertionIndex,
+                    });
+
+                    return newCurrency;
+
+                }
+                catch (Exception ex)
+                {
+                    throw new NotAbleCreateCurrencyException("Something went wrong creating the currency.");
+                }
+
             }
             else
-            {
-                throw new ArgumentException("The Currency already exists.");
-            }
-
+                {
+                    throw new CurrencyAlreadyExistException("The Currency already exists.");
+                }
         }
         public void DeleteCurrency(string code)
         {
             var curToDelete = _repository.GetCurrencyByCode(code);
-            if(curToDelete == null)
+            if (curToDelete != null)
             {
-                throw new ArgumentException("The currency does not exist");
+                try
+                {
+                    _repository.DeleteCurrency(code);
+                }
+                catch (Exception ex)
+                {
+                    throw new NotAbleDeleteCurrency("We couldn´t delete the currency");
+                }
             }
-
-            _repository.DeleteCurrency(code);
+            else
+            {
+                throw new CurrencyNotExistException("The currency does not exist");
+            }
         }
+
         public void UpdateCurrencyByCode(string code, float Ic)
         {
             var CurrencyToUpdate = _repository.GetCurrencyByCode(code);
-            if (CurrencyToUpdate == null)
+            if (CurrencyToUpdate != null & Ic > 0)
             {
-                throw new ArgumentException("Code not found");
+                try
+                {
+                    _repository.UpdateCurrencyIC(code, Ic);
+                }
+                catch (Exception ex)
+                {
+                    throw new NotAbleUpdateCurrencyException("Something went wrong while we were updating the currency");
+                }
             }
-
-
-            _repository.UpdateCurrencyIC(code, Ic);
-
+            else if (Ic < 0)
+            {
+                throw new ConvertionIndexLowerThanZeroException("You can´t have a convertion index lower than 0!");
+            }
+            else
+            {
+                throw new CurrencyNotExistException("Code not found");
+            }
         }
 
         public IEnumerable<CurrencyForDto>? GetAllCurrencies()
         {
-            var currencyList = _repository.GetActiveCurrencies();
-            List<CurrencyForDto> currenciesForView = new List<CurrencyForDto>();
-            foreach(var Currency in currencyList)
+            try
             {
-                var currencyDto = new CurrencyForDto
+                var currencyList = _repository.GetActiveCurrencies();
+                List<CurrencyForDto> currenciesForView = new List<CurrencyForDto>();
+                foreach (var Currency in currencyList)
                 {
-                    Code = Currency.Code,
-                    Legend = Currency.Legend,
-                    Symbol = Currency.Symbol,
-                    ConvertionIndex = Currency.ConvertionIndex,
-                };
-                currenciesForView.Add(currencyDto);
+                    var currencyDto = new CurrencyForDto
+                    {
+                        Code = Currency.Code,
+                        Legend = Currency.Legend,
+                        Symbol = Currency.Symbol,
+                        ConvertionIndex = Currency.ConvertionIndex,
+                    };
+                    currenciesForView.Add(currencyDto);
+                }
+                return currenciesForView;
             }
-            return currenciesForView;
+            catch (Exception ex)
+            {
+                throw new NotAbleFindCurrencyException("We couldn´t find the currencies.");
+            }
         }
 
         public CurrencyForDto? GetCurrencyByCode(string code)
         {
-            var curr = _repository.GetCurrencyByCode(code);
-            if (curr == null)
+            try
             {
-                throw new ArgumentException("The code you are looking for doens´t exist.");
+                var curr = _repository.GetCurrencyByCode(code);
+                if (curr == null)
+                {
+                    throw new ArgumentException("The code you are looking for doens´t exist.");
+                }
+                var currForView = new CurrencyForDto
+                {
+                    Code = curr.Code,
+                    Legend = curr.Legend,
+                    Symbol = curr.Symbol,
+                    ConvertionIndex = curr.ConvertionIndex,
+                };
+
+                return currForView;
             }
-            var currForView = new CurrencyForDto
+            catch (Exception ex)
             {
-                Code = curr.Code,
-                Legend = curr.Legend,
-                Symbol = curr.Symbol,
-                ConvertionIndex = curr.ConvertionIndex,
-            };
-
-            return currForView;
+                throw new CurrencyNotExistException("The currency that you are looking for does not exist");
+            }
         }
-
 
 
 
@@ -127,48 +171,23 @@ namespace Services.Implementations
                 Currency sourceCurrency = _repository.GetCurrencyByCode(conv.Code1)!;
                 Currency targetCurrency = _repository.GetCurrencyByCode(conv.Code2)!;
                 float convertedAmount = conv.Amount;
+                try
+                {
+                    float convertedOutput = convertedAmount * (targetCurrency.ConvertionIndex / sourceCurrency.ConvertionIndex);
 
-                float convertedOutput = convertedAmount * (targetCurrency.ConvertionIndex / sourceCurrency.ConvertionIndex);
+                    _userRepository.SumConversion();
 
-                _userRepository.SumConversion();
-
-                return convertedOutput;
+                    return convertedOutput;
+                }
+                catch (Exception ex)
+                {
+                    throw new SomethingWentWrongInTheConvertionException("Sth went wrong");
+                }
             }
             else
             {
                 return null;
             }
         }
-
-        //    var userId = int.Parse(_httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
-
-
-        //    var user = _userRepository.GetUserById(userId);
-        //    if (user.conversions < user.Subscription.MaxConversions)
-        //    {
-
-        //        float? cur1 = _repository.GetCurrencyByCode(conv.Code1)?.ConvertionIndex;
-        //        float? cur2 = _repository.GetCurrencyByCode(conv.Code2)?.ConvertionIndex;
-
-        //        if (cur1 == null || cur2 == null)
-        //        {
-        //            throw new ArgumentException("You have to fulfill both currencies camps");
-        //        }
-        //        else if (conv.Amount < 0)
-        //        {
-        //            throw new ArgumentException("You can´t convert negative values");
-        //        }
-        //        float? amountInC2 = conv.Amount * (cur1 / cur2);
-        //        _userRepository.SumConversion();
-
-        //        return amountInC2;
-        //    }
-        //     throw new ArgumentException("You can´t make more convertions");
-        //}
-
-
-
-
-
     }
 }

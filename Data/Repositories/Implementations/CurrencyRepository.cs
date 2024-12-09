@@ -30,29 +30,16 @@ namespace Services.Implementations
 
         public Currency? GetCurrencyByCode(string code)
         {
-            var curr = _context.Currencies.SingleOrDefault(c => c.Code == code);
-            try
-            {
-                return curr;
-            }
-            catch (Exception ex)
-            {
-                throw new ArgumentException("The currency is not able");
-            }
+            return _context.Currencies.SingleOrDefault(c => c.Code == code);
+
         }
 
         public string CreateCurrency(Currency currency)
         {
-            try
-            {
+
                 _context.Currencies.Add(currency);
                 _context.SaveChanges();
                 return currency.Code;
-            }
-            catch (Exception ex)
-            {
-                throw new ArgumentException("Something while we were trying to create the currency");
-            }
         }
         public void DeleteCurrency(string code)
         {
@@ -68,39 +55,10 @@ namespace Services.Implementations
         public void UpdateCurrencyIC(string currency, float Ic)
         {
 
-            var currencyToUpdate = _context.Currencies.SingleOrDefault(c => c.Code == currency);
-
-            if (currencyToUpdate != null)
-            {
-                currencyToUpdate.ConvertionIndex = Ic;
-                _context.SaveChanges();
-            }
+            Currency? currencyToUpdate = _context.Currencies.SingleOrDefault(c => c.Code == currency);
+            currencyToUpdate.ConvertionIndex = Ic;
+            _context.SaveChanges();
         }
-
-        //public Currency? GetCurrency(CurrencyUpdateRequestDto dto)
-        //{
-        //    if (dto == null) return null; 
-
-      
-        //    if (dto.Code.HasValue)
-        //    {
-        //        return _context.Currencies.SingleOrDefault(c => c.Code == dto.Code.Value);
-        //    }
-
-        //    if (dto.Legend.HasValue) 
-        //    {
-        //        return _context.Currencies.SingleOrDefault(c => c.Legend == dto.Legend.Value);
-        //    }
-
-        //    return null; 
-        //}
-
-
-
-
-
-
-
     }
 
 }

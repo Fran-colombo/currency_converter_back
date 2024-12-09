@@ -42,23 +42,16 @@ namespace Services.Implementations
 
         public int ChangeSubsctiption(int id, int subId)
         {
-            var usersubtype = _context.Users.SingleOrDefault(u => u.Id == id);
-            try
-            {
-                usersubtype.SubscriptionId = subId;
-                _context.SaveChanges();
-                return id;
-            }
-            catch (Exception ex) 
-            {
-                throw new ArgumentException("Something ocurred and you weren´t able to change the subscription");
-            }
-            //return null;
+            User? usersubtype = _context.Users.SingleOrDefault(u => u.Id == id);
+
+            usersubtype.SubscriptionId = subId;
+            _context.SaveChanges();
+             return id;
 
         }
         public int GetMaxConversions(SubscriptionType? type)
         {
-            if(type == null) return 0;
+            
             return type switch
             {
                 SubscriptionType.Free => 10,

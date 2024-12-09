@@ -32,3 +32,4 @@ C:\Users\Francesco\source\repos\ProyectoFinal\Currency_converter_back\Data\obj\D
 C:\Users\Francesco\source\repos\ProyectoFinal\Currency_converter_back\Data\obj\Debug\net8.0\Data.pdb
 C:\Users\Francesco\source\repos\ProyectoFinal\Currency_converter_back\Data\obj\Debug\net8.0\Data.genruntimeconfig.cache
 C:\Users\Francesco\source\repos\ProyectoFinal\Currency_converter_back\Data\obj\Debug\net8.0\ref\Data.dll
+C:\Users\Francesco\source\repos\ProyectoFinal\Currency_converter_back\Data\obj\Debug\net8.0\Data.sourcelink.json
