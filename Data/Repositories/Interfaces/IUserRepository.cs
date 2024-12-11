@@ -14,6 +14,6 @@ namespace Data.Repositories.Interfaces
         string UpdateUserSub(string username, int idSub);
         User? GetUserById(int id);
         User? GetUserByUsername(string username);
-        int SumConversion();
+        //int SumConversion();
     }
 }

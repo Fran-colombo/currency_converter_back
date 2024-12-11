@@ -27,7 +27,7 @@ namespace Data.Entities
         public int SubscriptionId {  get; set; }
         [ForeignKey("SubscriptionId")]
         public Subscription Subscription { get; set; }
-        public int conversions { get; set; } = 0;
+        public int conversions { get; set; } 
         public UserRole Role { get; set; }
         //public bool? isDeleted { get; set; } = false;
     }

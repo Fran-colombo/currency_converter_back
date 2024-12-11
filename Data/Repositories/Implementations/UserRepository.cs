@@ -48,6 +48,8 @@ namespace Services.Implementations
         }
 
 
+
+
         public User? GetUserById(int id)
         {
 
@@ -86,26 +88,26 @@ namespace Services.Implementations
 
         }
 
-        public int SumConversion()
-        {
+        //public int SumConversion()
+        //{
             
-            var userId = int.Parse(_httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+        //    var userId = int.Parse(_httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
 
-            // Busca el usuario en la base de datos
-            var user = _context.Users.SingleOrDefault(u => u.Id == userId);
-            if (user != null)
-            {
-                // Incrementa la cantidad de conversiones
-                user.conversions += 1;
-                _context.SaveChanges();
-                return user.conversions;
-            }
-            if (user.conversions > user.Subscription.MaxConversions)
-            {
-                throw new Exception("Has alcanzado el límite máximo de conversiones para tu suscripción.");
-            }
-            return 0; 
-        }
+        //    // Busca el usuario en la base de datos
+        //    var user = _context.Users.SingleOrDefault(u => u.Id == userId);
+        //    if (user != null)
+        //    {
+        //        // Incrementa la cantidad de conversiones
+        //        user.conversions += 1;
+        //        _context.SaveChanges();
+        //        return user.conversions;
+        //    }
+        //    if (user.conversions > user.Subscription.MaxConversions)
+        //    {
+        //        throw new Exception("Has alcanzado el límite máximo de conversiones para tu suscripción.");
+        //    }
+        //    return 0; 
+        //}
 
 
 

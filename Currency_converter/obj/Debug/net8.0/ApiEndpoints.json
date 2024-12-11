@@ -16,6 +16,48 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Currency_converter.Controllers.ConvertionController",
+    "Method": "GetUserConvertions",
+    "RelativePath": "api/Convertion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Currency_converter.Controllers.ConvertionController",
+    "Method": "GetUserConvertionById",
+    "RelativePath": "api/Convertion/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Currency_converter.Controllers.ConvertionController",
+    "Method": "GetConvertion",
+    "RelativePath": "api/Convertion/conv",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "conv",
+        "Type": "Common.Models.MakeConvertionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Currency_converter.Controllers.CurrencyController",
     "Method": "Get",
     "RelativePath": "api/Currency",
@@ -84,22 +126,6 @@
       {
         "Name": "code",
         "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Currency_converter.Controllers.CurrencyController",
-    "Method": "GetConvertion",
-    "RelativePath": "api/Currency/conv",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "conv",
-        "Type": "Common.Models.MakeConvertionDto",
         "IsRequired": true
       }
     ],
@@ -229,6 +255,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Currency_converter.Controllers.UserController",
+    "Method": "GetUserById",
+    "RelativePath": "api/User/id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]

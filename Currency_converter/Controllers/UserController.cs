@@ -3,6 +3,7 @@ using Common.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Services.Interfaces;
+using System.Security.Claims;
 
 namespace Currency_converter.Controllers
 {
@@ -28,6 +29,13 @@ namespace Currency_converter.Controllers
         {
             return Ok(_userService.GetUserByUsername(username));
         }
+        [HttpGet("id")]
+        public IActionResult GetUserById()
+        {
+            int userId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value ?? "");
+            return Ok(_userService.GetUserById(userId));
+        }
+
 
         [HttpPost]
         [Authorize(Policy = "UnauthorizeIfUser")]

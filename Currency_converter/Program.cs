@@ -7,6 +7,7 @@ using Services.Interfaces;
 using System.Text.Json.Serialization;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Data.Repositories.Implementations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -74,10 +75,12 @@ builder.Services.AddAuthentication("Bearer")
 
 
 builder.Services.AddScoped<ICurrencyRepository, CurrencyRepository>();
+builder.Services.AddScoped<IConvertionsRepository, ConvertionsRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ISubscriptionRepository, SubscriptionRepository>();
 
 builder.Services.AddScoped<ICurrencyService, CurrencyService>();
+builder.Services.AddScoped<IConvertionService, ConvertionService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ISubscriptionService, SubscriptionService>();
 

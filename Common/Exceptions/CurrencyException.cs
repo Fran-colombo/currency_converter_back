@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Common.Exceptions
 {
-    public class SomethingWentWrongInTheConvertionException : Exception
-    {
-        public SomethingWentWrongInTheConvertionException() : base("something went wrong while we where trying to make the convertion.") { }
-        public SomethingWentWrongInTheConvertionException(string message) : base(message) { }
-    }
+    //public class SomethingWentWrongInTheConvertionException : Exception
+    //{
+    //    public SomethingWentWrongInTheConvertionException() : base("something went wrong while we where trying to make the convertion.") { }
+    //    public SomethingWentWrongInTheConvertionException(string message) : base(message) { }
+    //}
     public class CurrencyAlreadyExistException : Exception
     {
         public CurrencyAlreadyExistException() : base("The currency already exists.") { }

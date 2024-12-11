@@ -162,32 +162,32 @@ namespace Services.Implementations
 
 
 
-        public float? MakeConvertion(int userId, MakeConvertionDto conv)
+        //public float? MakeConvertion(int userId, MakeConvertionDto conv)
        
-        {
-            User user = _userRepository.GetUserById(userId)!;
-            if (user.conversions < user.Subscription.MaxConversions)
-            {
-                Currency sourceCurrency = _repository.GetCurrencyByCode(conv.Code1)!;
-                Currency targetCurrency = _repository.GetCurrencyByCode(conv.Code2)!;
-                float convertedAmount = conv.Amount;
-                try
-                {
-                    float convertedOutput = convertedAmount * (targetCurrency.ConvertionIndex / sourceCurrency.ConvertionIndex);
+        //{
+        //    User user = _userRepository.GetUserById(userId)!;
+        //    if (user.conversions < user.Subscription.MaxConversions)
+        //    {
+        //        Currency sourceCurrency = _repository.GetCurrencyByCode(conv.Code1)!;
+        //        Currency targetCurrency = _repository.GetCurrencyByCode(conv.Code2)!;
+        //        float convertedAmount = conv.Amount;
+        //        try
+        //        {
+        //            float convertedOutput = convertedAmount * (targetCurrency.ConvertionIndex / sourceCurrency.ConvertionIndex);
 
-                    _userRepository.SumConversion();
+        //            _userRepository.SumConversion();
 
-                    return convertedOutput;
-                }
-                catch (Exception ex)
-                {
-                    throw new SomethingWentWrongInTheConvertionException("Sth went wrong");
-                }
-            }
-            else
-            {
-                return null;
-            }
-        }
+        //            return convertedOutput;
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            throw new SomethingWentWrongInTheConvertionException("Sth went wrong");
+        //        }
+        //    }
+        //    else
+        //    {
+        //        return null;
+        //    }
+        //}
     }
 }

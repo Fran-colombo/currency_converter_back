@@ -57,19 +57,19 @@ namespace Currency_converter.Controllers
             return Ok();
         }
 
-        [HttpPost("conv")]
-        public IActionResult GetConvertion([FromBody] MakeConvertionDto conv)
-        {
-            int userId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value ?? "");
+        //[HttpPost("conv")]
+        //public IActionResult GetConvertion([FromBody] MakeConvertionDto conv)
+        //{
+        //    int userId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value ?? "");
 
-            try
-            {
-                return Ok(_service.MakeConvertion(userId, conv));
-            }
-            catch
-            {
-                return BadRequest();
-            }
-        }
+        //    try
+        //    {
+        //        return Ok(_service.MakeConvertion(userId, conv));
+        //    }
+        //    catch
+        //    {
+        //        return BadRequest();
+        //    }
+        //}
     }
 }

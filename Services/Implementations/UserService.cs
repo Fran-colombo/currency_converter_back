@@ -18,11 +18,13 @@ namespace Services.Implementations
     {
         private readonly IUserRepository _repository;
         private readonly ISubscriptionRepository _subRepo;
+       private readonly IConvertionsRepository _convRepo;
         
-        public UserService(IUserRepository repository, ISubscriptionRepository subRepo)
+        public UserService(IUserRepository repository, ISubscriptionRepository subRepo, IConvertionsRepository convRepo)
         {
             _repository = repository;
             _subRepo = subRepo;
+            _convRepo = convRepo;
             
         }
 
@@ -91,30 +93,67 @@ namespace Services.Implementations
             }
 
         }
+        //public IEnumerable<UserDto> GetUsers()
+        //{
+        //    try
+        //    {
+        //        return _repository.GetAllUsers().Select
+        //            (u => new UserDto
+        //            {
+        //                Username = u.Username,
+        //                Email = u.Email,
+        //                Subscription = new SubscriptionDto
+        //                {
+        //                    Id = u.Subscription.Id,
+        //                    SubscriptionType = u.Subscription.SubscriptionType,
+        //                    MaxConversions = u.Subscription.MaxConversions
+        //                },
+        //                Conversions = u.conversions,
+        //                Role = u.Role
+        //            });
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw new UsersNotFoundException("We couldn´t get the users.");
+        //    }
+        //}
         public IEnumerable<UserDto> GetUsers()
         {
             try
             {
-                return _repository.GetAllUsers().Select
-                    (u => new UserDto
+                var users = _repository.GetAllUsers();
+
+                var userDtos = new List<UserDto>();
+
+                foreach (var user in users)
+                {
+                    //int currentMonthConversions = _convRepo.GetConvertionsByMonths(user.Id);
+
+                    var userDto = new UserDto
                     {
-                        Username = u.Username,
-                        Email = u.Email,
+                        Username = user.Username,
+                        Email = user.Email,
                         Subscription = new SubscriptionDto
                         {
-                            Id = u.Subscription.Id,
-                            SubscriptionType = u.Subscription.SubscriptionType,
-                            MaxConversions = u.Subscription.MaxConversions
+                            Id = user.Subscription.Id,
+                            SubscriptionType = user.Subscription.SubscriptionType,
+                            MaxConversions = user.Subscription.MaxConversions
                         },
-                        Conversions = u.conversions,
-                        Role = u.Role
-                    }).ToList();
+                        Conversions = _convRepo.GetConvertionsByMonths(user.Id), 
+                        Role = user.Role
+                    };
+
+                    userDtos.Add(userDto);
+                }
+
+                return userDtos;
             }
             catch (Exception ex)
             {
-                throw new UsersNotFoundException("We couldn´t get the users.");
+                throw new UsersNotFoundException("We couldn’t get the users.");
             }
         }
+
 
 
         public User? GetUserById(int id)
@@ -131,6 +170,8 @@ namespace Services.Implementations
          public UserDto? GetUserByUsername(string username)
         {
             var user = _repository.GetUserByUsername(username);
+            //int userConv = _convRepo.GetConvertionsByMonths(user.Id);
+            
             if (user != null)
             {
                 try
@@ -145,7 +186,7 @@ namespace Services.Implementations
                             SubscriptionType = user.Subscription.SubscriptionType,
                             MaxConversions = user.Subscription.MaxConversions
                         },
-                        Conversions = user.conversions,
+                        Conversions = _convRepo.GetConvertionsByMonths(user.Id),
                         Role = user.Role
                     };
                     return newUser;
