@@ -91,32 +91,8 @@ namespace Services.Implementations
             {
                 throw new UserNotFoundException("The user you are looking for doesn´t exist");
             }
-
         }
-        //public IEnumerable<UserDto> GetUsers()
-        //{
-        //    try
-        //    {
-        //        return _repository.GetAllUsers().Select
-        //            (u => new UserDto
-        //            {
-        //                Username = u.Username,
-        //                Email = u.Email,
-        //                Subscription = new SubscriptionDto
-        //                {
-        //                    Id = u.Subscription.Id,
-        //                    SubscriptionType = u.Subscription.SubscriptionType,
-        //                    MaxConversions = u.Subscription.MaxConversions
-        //                },
-        //                Conversions = u.conversions,
-        //                Role = u.Role
-        //            });
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw new UsersNotFoundException("We couldn´t get the users.");
-        //    }
-        //}
+
         public IEnumerable<UserDto> GetUsers()
         {
             try
@@ -162,7 +138,7 @@ namespace Services.Implementations
             {
             return _repository.GetUserById(id);
             }
-            catch (Exception ex)
+            catch (UserNotFoundException)
             {
                 throw new UserNotFoundException("There is sth wrong in your code");
             }
@@ -192,15 +168,51 @@ namespace Services.Implementations
                     return newUser;
 
                 }
-                catch (Exception ex)
+                catch (UserNotFoundException)
                 {
-                    throw new UserNotFoundException("Something went wrong when we tried to find the user");
+                    throw ;
                 }
             }
             else
             {
-                throw new UserNotFoundException("user not found");
+                return null;
             }
+        }
+
+        public UserDto? GetUserByEmail(string email)
+        {
+            var user = _repository.GetUserByUsername(email);
+
+            if (user != null)
+            {
+                try
+                {
+                    var newUser = new UserDto
+                    {
+                        Username = user.Username,
+                        Email = user.Email,
+                        Subscription = new SubscriptionDto
+                        {
+                            Id = user.Subscription.Id,
+                            SubscriptionType = user.Subscription.SubscriptionType,
+                            MaxConversions = user.Subscription.MaxConversions
+                        },
+                        Conversions = _convRepo.GetConvertionsByMonths(user.Id),
+                        Role = user.Role
+                    };
+                    return newUser;
+
+                }
+                catch (UserNotFoundException)
+                {
+                    throw;
+                }
+            }
+            else
+            {
+                return null;
+            }
+
         }
 
         public void DeleteUser(string username)
@@ -212,9 +224,9 @@ namespace Services.Implementations
                 {
                     _repository.DeleteUser(username);
                 }
-                catch (Exception ex)
+                catch (NotAbleDeleteUser)
                 {
-                    throw new NotAbleDeleteUser("Something went wrong while we tried to delete the user");
+                    throw ;
                 }
             }
             else{
@@ -224,8 +236,7 @@ namespace Services.Implementations
 
         public User? AuthenticateUser(CredentialsToAuthenticateDto credentials)
         {
-        return _repository.Authenticate(credentials);
-        
+            return _repository.Authenticate(credentials);
         }
 
 

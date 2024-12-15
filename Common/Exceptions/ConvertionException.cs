@@ -18,5 +18,10 @@ namespace Common.Exceptions
             public NotAbleGetUserConvertions() : base("something went wrong while we where trying get the user convertions.") { }
             public NotAbleGetUserConvertions(string message) : base(message) { }
         }
+        public class DontHaveMoreConvertions : Exception
+        {
+            public DontHaveMoreConvertions() : base("You do not have more convertions.") { }
+            public DontHaveMoreConvertions(string message) : base(message) { }
+        }
     }
 }

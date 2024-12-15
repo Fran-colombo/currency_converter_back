@@ -6,7 +6,7 @@ namespace Services.Interfaces
 {
     public interface ICurrencyService
     {
-        string AddCurrency(CurrencyForDto CreationDTO);
+        void AddCurrency(CurrencyForDto CreationDTO);
         void DeleteCurrency(string code);
         IEnumerable<CurrencyForDto>? GetAllCurrencies();
         CurrencyForDto? GetCurrencyByCode(string code);

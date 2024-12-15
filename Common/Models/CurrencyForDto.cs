@@ -17,5 +17,7 @@ namespace Common.Models
         public string? Symbol { get; set; }
         [Required]
         public float ConvertionIndex { get; set; }
+        //public bool isActive { get; set; } = true;
+
     }
 }

@@ -70,6 +70,9 @@ namespace Data.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("isActive")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Code");
 
                     b.ToTable("Currencies");
@@ -80,21 +83,24 @@ namespace Data.Migrations
                             Code = "USD",
                             ConvertionIndex = 1f,
                             Legend = "UnitedStatesDollar",
-                            Symbol = "$"
+                            Symbol = "$",
+                            isActive = true
                         },
                         new
                         {
                             Code = "EUR",
                             ConvertionIndex = 1.09f,
                             Legend = "Euro",
-                            Symbol = "€"
+                            Symbol = "€",
+                            isActive = true
                         },
                         new
                         {
                             Code = "CLP",
                             ConvertionIndex = 0.001f,
                             Legend = "ChileanPeso",
-                            Symbol = "$"
+                            Symbol = "$",
+                            isActive = true
                         });
                 });
 

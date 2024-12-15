@@ -61,14 +61,21 @@ namespace Currency_converter.Controllers
         public IActionResult GetConvertion([FromBody] MakeConvertionDto conv)
         {
             int userId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value ?? "");
-
-            try
+            bool canconv = _service.canConvert(userId);
+            if (canconv)
             {
-                return Ok(_service.MakeConvertion(userId, conv));
+                try
+                {
+                    return Ok(_service.MakeConvertion(userId, conv));
+                }
+                catch
+                {
+                    return BadRequest();
+                }
             }
-            catch
+            else
             {
-                return BadRequest();
+                return NoContent();
             }
         }
     }

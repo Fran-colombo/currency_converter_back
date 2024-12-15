@@ -40,11 +40,11 @@ namespace Services.Implementations
                     {
                         var newConvertion = new ConvertionToShowDto
                         {
-                            Username = convertion.User.Username, // Asumiendo que tienes Username en User
-                            Code1 = convertion.FromCurrency.Code, // Cambia a la propiedad correcta
-                            Code2 = convertion.ToCurrency.Code,   // Cambia a la propiedad correcta
+                            Username = convertion.User.Username, 
+                            Code1 = convertion.FromCurrency.Code, 
+                            Code2 = convertion.ToCurrency.Code,  
                             Amount = convertion.Amount,
-                            Result = convertion.ConvertedAmount,
+                            Result = convertion.ToCurrency.Symbol + convertion.ConvertedAmount,
                             Date = convertion.Date,
                         };
                         convertionList.Add(newConvertion);
@@ -64,17 +64,36 @@ namespace Services.Implementations
         }
 
     
+        public bool canConvert(int userId)
+        {
+            try
+            {
+                User user = _userRepository.GetUserById(userId)!;
+                int userConv = _repository.GetConvertionsByMonths(userId);
+                if (userConv < user.Subscription.MaxConversions)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (UserNotFoundException ex)
+            {
+                throw ex;
+            }
+        }
 
 
 
 
-        public float? MakeConvertion(int userId, MakeConvertionDto conv)
+        public string? MakeConvertion(int userId, MakeConvertionDto conv)
 
         {
             User user = _userRepository.GetUserById(userId)!;
-            int userConv = _repository.GetConvertionsByMonths(userId);
-            if (userConv < user.Subscription.MaxConversions)
-            {
+            bool cancon = canConvert(userId);
+            if (cancon == true) {
                 Currency sourceCurrency = _curRepository.GetCurrencyByCode(conv.Code1)!;
                 Currency targetCurrency = _curRepository.GetCurrencyByCode(conv.Code2)!;
                 float amount = conv.Amount;
@@ -102,12 +121,12 @@ namespace Services.Implementations
                     {
                         _repository.AddConversion(newConversion);
 
-                        return convertedOutput;
+                        return targetCurrency.Symbol + convertedOutput;
                     }
                 }
-                catch (Exception ex)
+                catch (SomethingWentWrongInTheConvertionException)
                 {
-                    throw new SomethingWentWrongInTheConvertionException("Sth went wrong");
+                    throw;
                 }
             }
             else

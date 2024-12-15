@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Data.Migrations
 {
     /// <inheritdoc />
-    public partial class volvimosafloat : Migration
+    public partial class ojalaseterminemivida3 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -20,7 +20,8 @@ namespace Data.Migrations
                     Code = table.Column<string>(type: "TEXT", nullable: false),
                     Legend = table.Column<string>(type: "TEXT", nullable: false),
                     Symbol = table.Column<string>(type: "TEXT", nullable: false),
-                    ConvertionIndex = table.Column<float>(type: "REAL", nullable: false)
+                    ConvertionIndex = table.Column<float>(type: "REAL", nullable: false),
+                    isActive = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -104,12 +105,12 @@ namespace Data.Migrations
 
             migrationBuilder.InsertData(
                 table: "Currencies",
-                columns: new[] { "Code", "ConvertionIndex", "Legend", "Symbol" },
+                columns: new[] { "Code", "ConvertionIndex", "Legend", "Symbol", "isActive" },
                 values: new object[,]
                 {
-                    { "CLP", 0.001f, "ChileanPeso", "$" },
-                    { "EUR", 1.09f, "Euro", "€" },
-                    { "USD", 1f, "UnitedStatesDollar", "$" }
+                    { "CLP", 0.001f, "ChileanPeso", "$", true },
+                    { "EUR", 1.09f, "Euro", "€", true },
+                    { "USD", 1f, "UnitedStatesDollar", "$", true }
                 });
 
             migrationBuilder.InsertData(

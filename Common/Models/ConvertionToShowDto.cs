@@ -12,7 +12,7 @@ namespace Common.Models
         public string Code1 { get; set; }
         public string Code2 { get; set; }
         public float Amount { get; set; }
-        public float Result { get; set; }
+        public string Result { get; set; }
         public DateTime Date {  get; set; }  
     }
 }

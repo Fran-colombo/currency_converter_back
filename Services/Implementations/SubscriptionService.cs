@@ -52,15 +52,15 @@ namespace Services.Implementations
                     userToUpdate.SubscriptionId = subId;
                     return subId;
                 }
-                catch (Exception ex)
+                catch (CouldNotUpdateSubscriptionException)
                 {
-                    throw new CouldNotUpdateSubscriptionException("Something went wrong while you tried to change subscription");
+                    throw;
                 }
 
             }
             else if (userToUpdate == null)
             {
-                throw new UserNotFoundException($"{username}you are looking for doesn´t exist.");
+                throw new UserNotFoundException($"{username} doesn´t exist.");
             }
             throw new SubscriptionIdNotFoundException("The subscriptionId you are looking for doesn´t exist.");
 
@@ -78,9 +78,9 @@ namespace Services.Implementations
             {
                 return _subscriptionRepository.GetMaxConversions(type);
             }
-            catch (Exception ex)
+            catch (MaxConvertionsNotFound)
             {
-                throw new MaxConvertionsNotFound("We couldn´t get the max convertions");
+                throw;
             }
         }
     }

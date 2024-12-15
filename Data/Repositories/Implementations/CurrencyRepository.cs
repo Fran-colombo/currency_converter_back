@@ -22,10 +22,13 @@ namespace Services.Implementations
             _context = context;
         }
 
-
-        public ICollection<Currency>? GetActiveCurrencies()
+        public ICollection<Currency>? GetAllCurrencies()
         {
             return _context.Currencies.Where(c => c.ConvertionIndex > 0).ToList();
+        }
+        public ICollection<Currency>? GetActiveCurrencies()
+        {
+            return _context.Currencies.Where(c => c.ConvertionIndex > 0 && c.isActive == true).ToList();
         }
 
         public Currency? GetCurrencyByCode(string code)
@@ -34,7 +37,7 @@ namespace Services.Implementations
 
         }
 
-        public string CreateCurrency(Currency currency)
+        public string AddCurrency(Currency currency)
         {
 
                 _context.Currencies.Add(currency);
@@ -46,7 +49,7 @@ namespace Services.Implementations
             Currency? currencyToDelete = _context.Currencies.SingleOrDefault(c => c.Code == code);
             if (currencyToDelete != null)
             {
-                _context.Currencies.Remove(currencyToDelete);
+                currencyToDelete.isActive = false;
                 _context.SaveChanges();
             }
         }
@@ -57,6 +60,16 @@ namespace Services.Implementations
 
             Currency? currencyToUpdate = _context.Currencies.SingleOrDefault(c => c.Code == currency);
             currencyToUpdate.ConvertionIndex = Ic;
+            _context.SaveChanges();
+        }
+        public void ActivateCurrency(Currency currency)
+        {
+
+            Currency? currencyToUpdate = _context.Currencies.SingleOrDefault(c => c.Code == currency.Code);
+            currencyToUpdate.Legend = currency.Legend;
+            currencyToUpdate.Symbol = currency.Symbol;
+            currencyToUpdate.ConvertionIndex = currency.ConvertionIndex;
+            currencyToUpdate.isActive = true;
             _context.SaveChanges();
         }
     }

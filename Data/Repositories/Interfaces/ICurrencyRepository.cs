@@ -6,11 +6,13 @@ namespace Data.Repositories.Interfaces
 {
     public interface ICurrencyRepository
     {
-        string CreateCurrency(Currency currency);
+        ICollection<Currency>? GetAllCurrencies();
+        string AddCurrency(Currency currency);
         void DeleteCurrency(string code);
         ICollection<Currency>? GetActiveCurrencies();
         Currency? GetCurrencyByCode(string code);
         void UpdateCurrencyIC(string currency, float Ic);
+        void ActivateCurrency(Currency currency);
         //Currency? GetCurrency(CurrencyUpdateRequestDto dto);
     }
 }

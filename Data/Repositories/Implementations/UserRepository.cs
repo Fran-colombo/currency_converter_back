@@ -62,6 +62,10 @@ namespace Services.Implementations
           return _context.Users.Include(u => u.Subscription).FirstOrDefault(u => u.Username == username);
 
         }
+        public User? GetUserByEmail(string email)
+        {
+            return _context.Users.Include(u => u.Subscription).FirstOrDefault(u => u.Email == email);
+        }
 
         public string UpdateUserSub(string username, int idSub) {
             var userToUpdate = _context.Users.FirstOrDefault(u => u.Username == username);

@@ -12,6 +12,7 @@ namespace Services.Interfaces
         void DeleteUser(string username);
         User? GetUserById(int id);
         UserDto? GetUserByUsername(string username);
+        UserDto? GetUserByEmail(string email);
         IEnumerable<UserDto> GetUsers();
         
     }

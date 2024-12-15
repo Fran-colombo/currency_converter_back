@@ -29,6 +29,7 @@ namespace Currency_converter.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public IActionResult GetSubscriptions() { 
 
             var allsubs = _service.GetAllSubscriptions();

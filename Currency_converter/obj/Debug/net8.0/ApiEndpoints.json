@@ -206,6 +206,22 @@
   },
   {
     "ContainingType": "Currency_converter.Controllers.UserController",
+    "Method": "UpdateUserSub",
+    "RelativePath": "api/User",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "subId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Currency_converter.Controllers.UserController",
     "Method": "GetUserByUsername",
     "RelativePath": "api/User/{username}",
     "HttpMethod": "GET",
@@ -222,7 +238,7 @@
   },
   {
     "ContainingType": "Currency_converter.Controllers.UserController",
-    "Method": "UpdateUserSub",
+    "Method": "UpdateUserSubAsAdmin",
     "RelativePath": "api/User/{username}",
     "HttpMethod": "PUT",
     "IsController": true,

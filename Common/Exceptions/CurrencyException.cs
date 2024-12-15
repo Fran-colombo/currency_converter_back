@@ -46,4 +46,10 @@ namespace Common.Exceptions
         public ConvertionIndexLowerThanZeroException() : base("The convertion index never can be lower than 0.") { }
         public ConvertionIndexLowerThanZeroException(string message) : base(message) { }
     }
+    
+     public class CurrencyIsAlreadyDeletedException : Exception
+    {
+        public CurrencyIsAlreadyDeletedException() : base("The currency is arealdy deleted.") { }
+        public CurrencyIsAlreadyDeletedException(string message) : base(message) { }
+    }
 }

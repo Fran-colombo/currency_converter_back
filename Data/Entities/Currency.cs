@@ -18,6 +18,7 @@ namespace Data.Entities
         public string Legend {  get; set; }
         public string Symbol { get; set; }
         public float ConvertionIndex { get; set; }
+        public bool isActive { get; set; } = true;
 
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Common.Enum;
+using Common.Exceptions;
 using Common.Models;
 using Data.Entities;
 using Microsoft.AspNetCore.Authorization;
@@ -21,12 +22,14 @@ namespace Currency_converter.Controllers
 
 
         [HttpGet]
+        [Authorize]
         public IActionResult Get()
         {
             return Ok(_service.GetAllCurrencies()?.OrderBy(c => c.Code));
         }
 
         [HttpGet("{code}")]
+        [Authorize]
         public IActionResult Get([FromRoute] string code)
         {
             return Ok(_service.GetCurrencyByCode(code));
@@ -36,10 +39,21 @@ namespace Currency_converter.Controllers
         [Authorize(Roles = "Admin")]
         public IActionResult CreateCurrency([FromBody] CurrencyForDto currency)
         {
-
-            _service.AddCurrency(currency);
-            return Ok();
+            try
+            {
+                _service.AddCurrency(currency);
+                return Ok();
+            }
+            catch (CurrencyAlreadyExistException ex)
+            {
+                return Conflict(new { message = ex.Message });  // Código 409 para conflicto
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
+
 
         [HttpDelete("{code}")]
         [Authorize(Roles = "Admin")]
@@ -57,19 +71,5 @@ namespace Currency_converter.Controllers
             return Ok();
         }
 
-        //[HttpPost("conv")]
-        //public IActionResult GetConvertion([FromBody] MakeConvertionDto conv)
-        //{
-        //    int userId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value ?? "");
-
-        //    try
-        //    {
-        //        return Ok(_service.MakeConvertion(userId, conv));
-        //    }
-        //    catch
-        //    {
-        //        return BadRequest();
-        //    }
-        //}
     }
 }

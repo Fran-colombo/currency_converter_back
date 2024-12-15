@@ -35,54 +35,76 @@ namespace Services.Implementations
             _repository = currencyRepository;
             _httpContextAccessor = httpContextAccessor;
         }
-
-        public string AddCurrency(CurrencyForDto CreationDTO)
+  
+        public void AddCurrency(CurrencyForDto CreationDTO)
         {
-            if (!_repository.GetActiveCurrencies().Any(e => e.Code == CreationDTO.Code))
+            var cur = _repository.GetCurrencyByCode(CreationDTO.Code);
+
+            // Si la moneda no existe, la creamos
+            if (cur == null)
             {
                 try
                 {
-
-                    var newCurrency = _repository.CreateCurrency(
-                    new Currency
+                    Currency newCurrency = new Currency
                     {
                         Code = CreationDTO.Code,
                         Legend = CreationDTO.Legend,
                         Symbol = CreationDTO.Symbol,
                         ConvertionIndex = CreationDTO.ConvertionIndex,
-                    });
+                        isActive = true,
+                    };
 
-                    return newCurrency;
-
+                    _repository.AddCurrency(newCurrency); // Método del repositorio para agregar una nueva moneda
                 }
                 catch (Exception ex)
                 {
                     throw new NotAbleCreateCurrencyException("Something went wrong creating the currency.");
                 }
+            }
+            // Si la moneda existe pero está inactiva, la activamos
+            else if (cur.isActive == false)
+            {
+                try
+                {
+                    cur.Legend = CreationDTO.Legend;
+                    cur.Symbol = CreationDTO.Symbol;
+                    cur.ConvertionIndex = CreationDTO.ConvertionIndex;
 
+                    // Activamos la moneda
+                    _repository.ActivateCurrency(cur);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Something went wrong activating the currency.");
+                }
             }
             else
-                {
-                    throw new CurrencyAlreadyExistException("The Currency already exists.");
-                }
+            {
+                throw new CurrencyAlreadyExistException("The Currency already exists and is active.");
+            }
         }
+
         public void DeleteCurrency(string code)
         {
             var curToDelete = _repository.GetCurrencyByCode(code);
-            if (curToDelete != null)
+            if (curToDelete != null && curToDelete.isActive == true)
             {
                 try
                 {
                     _repository.DeleteCurrency(code);
                 }
-                catch (Exception ex)
+                catch (NotAbleDeleteCurrency)
                 {
-                    throw new NotAbleDeleteCurrency("We couldn´t delete the currency");
+                    throw ;
                 }
+            }
+            else if(curToDelete == null) 
+            {
+                throw new CurrencyNotExistException("The currency does not exist");
             }
             else
             {
-                throw new CurrencyNotExistException("The currency does not exist");
+                throw new CurrencyIsAlreadyDeletedException("The currency does not exist");
             }
         }
 
@@ -95,9 +117,9 @@ namespace Services.Implementations
                 {
                     _repository.UpdateCurrencyIC(code, Ic);
                 }
-                catch (Exception ex)
+                catch (NotAbleUpdateCurrencyException)
                 {
-                    throw new NotAbleUpdateCurrencyException("Something went wrong while we were updating the currency");
+                    throw ;
                 }
             }
             else if (Ic < 0)
@@ -129,9 +151,9 @@ namespace Services.Implementations
                 }
                 return currenciesForView;
             }
-            catch (Exception ex)
+            catch (NotAbleFindCurrencyException)
             {
-                throw new NotAbleFindCurrencyException("We couldn´t find the currencies.");
+                throw ;
             }
         }
 
@@ -140,7 +162,7 @@ namespace Services.Implementations
             try
             {
                 var curr = _repository.GetCurrencyByCode(code);
-                if (curr == null)
+                if (curr == null || curr.isActive == false)
                 {
                     throw new ArgumentException("The code you are looking for doens´t exist.");
                 }
@@ -154,9 +176,9 @@ namespace Services.Implementations
 
                 return currForView;
             }
-            catch (Exception ex)
+            catch (CurrencyNotExistException)
             {
-                throw new CurrencyNotExistException("The currency that you are looking for does not exist");
+                throw;
             }
         }
 
