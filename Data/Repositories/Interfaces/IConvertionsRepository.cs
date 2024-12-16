@@ -7,5 +7,7 @@ namespace Data.Repositories.Interfaces
         void AddConversion(Convertions convertion);
         IEnumerable<Convertions> GetUserConvertions(int id);
         int GetConvertionsByMonths(int id);
+
+        IEnumerable<Convertions>? getConvertionsForMonth(string username, int month);
     }
 }

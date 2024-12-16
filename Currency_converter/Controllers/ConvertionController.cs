@@ -31,8 +31,8 @@ namespace Currency_converter.Controllers
             catch (Exception ex) {
                 throw new NotAbleGetUserConvertions("We couldn´t get your convertions");
             }
-
         }
+
         [HttpGet("{id}")]
         [Authorize(Roles = "Admin")]
         public IActionResult GetUserConvertionById([FromRoute] int id) 
@@ -53,6 +53,28 @@ namespace Currency_converter.Controllers
             {
                 throw new NotAbleGetUserConvertions("We couldn´t get your convertions");
             } 
+        }
+
+        [HttpGet("user/{username}")]
+        [Authorize(Roles = "Admin")]
+        public IActionResult GetUserConvertionsF([FromRoute] string username, [FromQuery] int month)
+        {
+            try
+            {
+                var user = _userService.GetUserByUsername(username);
+                if (user != null)
+                {
+                    return Ok(_service.getUserConvertionsForMonth(username, month));
+                }
+                else
+                {
+                    return BadRequest();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new NotAbleGetUserConvertions("We couldn´t get your convertions");
+            }
         }
 
 

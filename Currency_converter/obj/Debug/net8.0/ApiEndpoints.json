@@ -58,6 +58,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Currency_converter.Controllers.ConvertionController",
+    "Method": "GetUserConvertionsForMonth",
+    "RelativePath": "api/Convertion/user/{username}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "month",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Currency_converter.Controllers.CurrencyController",
     "Method": "Get",
     "RelativePath": "api/Currency",

@@ -10,7 +10,7 @@ namespace Services.Interfaces
         User? AuthenticateUser(CredentialsToAuthenticateDto credentials);
         string UpdateUserSub(string username, int subId);
         void DeleteUser(string username);
-        User? GetUserById(int id);
+        UserDto? GetUserById(int id);
         UserDto? GetUserByUsername(string username);
         UserDto? GetUserByEmail(string email);
         IEnumerable<UserDto> GetUsers();

@@ -75,7 +75,19 @@ namespace Services.Implementations
         public string UpdateUserSub(string username, int subId)
         {
             var userToUpdate = _repository.GetUserByUsername(username);
-            if (userToUpdate != null)
+            var sub = _subRepo.GetSubscriptionById(subId);
+            var userConv = _convRepo.GetConvertionsByMonths(userToUpdate.Id);
+
+            if (userToUpdate == null)
+            {
+                throw new UserNotFoundException("The user you are looking for doesn´t exist");
+            }
+
+            else if (userConv > sub.MaxConversions)
+            {
+                throw new ArgumentException($"The user already has {userConv} conversions, which exceeds the limit ({sub.MaxConversions}) for the selected subscription type.");
+            }
+            else
             {
                 try
                 {
@@ -84,14 +96,11 @@ namespace Services.Implementations
                 }
                 catch (Exception ex)
                 {
-                    throw new FailUpdatingUserException("Something went wrong while ypu tried to update the user subscription");
+                    throw new FailUpdatingUserException("Something went wrong while you tried to update the user subscription");
                 }
             }
-            else
-            {
-                throw new UserNotFoundException("The user you are looking for doesn´t exist");
-            }
         }
+
 
         public IEnumerable<UserDto> GetUsers()
         {
@@ -132,15 +141,35 @@ namespace Services.Implementations
 
 
 
-        public User? GetUserById(int id)
+        public UserDto? GetUserById(int id)
         {
-            try
+            var user = _repository.GetUserById(id);
+            if (user != null)
+                try
+                {
+                    var newUser = new UserDto
+                    {
+                        Username = user.Username,
+                        Email = user.Email,
+                        Subscription = new SubscriptionDto
+                        {
+                            Id = user.Subscription.Id,
+                            SubscriptionType = user.Subscription.SubscriptionType,
+                            MaxConversions = user.Subscription.MaxConversions
+                        },
+                        Conversions = _convRepo.GetConvertionsByMonths(user.Id),
+                        Role = user.Role
+                    };
+                    return newUser;
+                }
+                catch (UserNotFoundException)
+                {
+                    throw;
+                }
+
+            else
             {
-            return _repository.GetUserById(id);
-            }
-            catch (UserNotFoundException)
-            {
-                throw new UserNotFoundException("There is sth wrong in your code");
+                return null;
             }
         }
          public UserDto? GetUserByUsername(string username)
@@ -166,7 +195,6 @@ namespace Services.Implementations
                         Role = user.Role
                     };
                     return newUser;
-
                 }
                 catch (UserNotFoundException)
                 {

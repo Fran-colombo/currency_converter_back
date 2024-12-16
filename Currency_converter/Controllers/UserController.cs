@@ -41,37 +41,6 @@ namespace Currency_converter.Controllers
         }
 
 
-        //[HttpPost]
-        //[Authorize(Policy = "UnauthorizeIfUser")]
-        //public IActionResult Add([FromBody] UserForCreationDto userDto)
-        //{
-        //    var user = _userService.GetUserByUsername(userDto.Username);
-        //    var email = _userService.GetUserByEmail(userDto.Email);
-
-        //    if (user == null && email == null)
-        //    {
-        //    try
-        //    {
-
-        //        _userService.AddUser(userDto);
-        //        return Ok("The user has been created");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return BadRequest(ex.Message);
-        //    }
-        //    }
-        //    else if (user != null)
-        //    {
-        //        return BadRequest(new { message = "Username already exists", type = "username" });
-        //    }
-        //    // Si el email ya existe, retornamos un error específico para el email
-        //    else 
-        //    {
-        //        return Conflict(new { message = "Email already exists", type = "email" });
-        //    }
-        //}
-
         [HttpPost]
         [Authorize(Policy = "UnauthorizeIfUser")]
         public IActionResult Add([FromBody] UserForCreationDto userDto)
@@ -103,20 +72,40 @@ namespace Currency_converter.Controllers
         }
 
 
+        //[HttpPut("{username}")]
+        //[Authorize(Roles ="Admin")]
+        //public IActionResult UpdateUserSubAsAdmin([FromRoute] string username, [FromBody] int subId)
+        //{
+        //    try
+        //    {
+        //        _userService.UpdateUserSub(username, subId);
+        //        return Ok(subId);
+        //    }
+        //    catch (ArgumentException ex)
+        //    {
+        //        throw new ArgumentException("Something went wrong, we weren´t able to update the subscription type");
+        //    }
+        //}
         [HttpPut("{username}")]
-        [Authorize(Roles ="Admin")]
+        [Authorize(Roles = "Admin")]
         public IActionResult UpdateUserSubAsAdmin([FromRoute] string username, [FromBody] int subId)
         {
             try
             {
                 _userService.UpdateUserSub(username, subId);
-                return Ok(subId);
+                return Ok(new { Message = "Subscription updated successfully", SubId = subId });
             }
             catch (ArgumentException ex)
             {
-                throw new ArgumentException("Something went wrong, we weren´t able to update the subscription type");
+                return BadRequest(new { Error = ex.Message }); // Devuelve un mensaje específico del error
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Error = "An unexpected error occurred" });
             }
         }
+
+
         [HttpPut]
         [Authorize]
         public IActionResult UpdateUserSub([FromBody] int subId)

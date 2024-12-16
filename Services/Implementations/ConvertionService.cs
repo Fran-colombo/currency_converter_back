@@ -63,7 +63,51 @@ namespace Services.Implementations
             }
         }
 
-    
+        public IEnumerable<ConvertionToShowDto>? getUserConvertionsForMonth(string username, int month)
+        {
+            if (1 <= month && month <= 12)
+            {
+                try
+                {
+                    var convertions = _repository.getConvertionsForMonth(username, month);
+                    if (convertions != null)
+                    {
+                        List<ConvertionToShowDto> convertionList = new List<ConvertionToShowDto>();
+
+                        foreach (var convertion in convertions)
+                        {
+                            var newConvertion = new ConvertionToShowDto
+                            {
+                                Username = convertion.User.Username,
+                                Code1 = convertion.FromCurrency.Code,
+                                Code2 = convertion.ToCurrency.Code,
+                                Amount = convertion.Amount,
+                                Result = convertion.ToCurrency.Symbol + convertion.ConvertedAmount,
+                                Date = convertion.Date,
+                            };
+                            convertionList.Add(newConvertion);
+                        }
+
+                        return convertionList;
+                    }
+                    else
+                    {
+                        throw new UserNotFoundException("The user id you are looking for doesn´t exist");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new NotAbleGetUserConvertions("We could not get the historial of convertions");
+                }
+            }
+            else
+            {
+                throw new Exception("You only have 12 month, come on, you are betten than this");
+            }
+            
+        }
+
+
         public bool canConvert(int userId)
         {
             try
