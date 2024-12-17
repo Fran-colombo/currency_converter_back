@@ -44,6 +44,8 @@ namespace Data
                 new User { Id = 2, Username = "user2", Password = "password2", confirmPassword = "password2", Email = "user2@example.com", SubscriptionId = 2, conversions = 0, Role = UserRole.User },
                 new User { Id = 3, Username = "user3", Password = "password3", confirmPassword = "password3", Email = "user3@example.com", SubscriptionId = 3, conversions = 0, Role = UserRole.Admin }
             );
+
+
         }
     }
 }

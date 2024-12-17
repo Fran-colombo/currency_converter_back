@@ -22,7 +22,13 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "month",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -59,7 +65,7 @@
   },
   {
     "ContainingType": "Currency_converter.Controllers.ConvertionController",
-    "Method": "GetUserConvertionsForMonth",
+    "Method": "GetUserConvertionsF",
     "RelativePath": "api/Convertion/user/{username}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -72,7 +78,7 @@
       },
       {
         "Name": "month",
-        "Type": "System.Int32",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       }
     ],

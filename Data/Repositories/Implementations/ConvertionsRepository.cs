@@ -66,5 +66,17 @@ namespace Data.Repositories.Implementations
                 .ToList();
         }
 
+        public IEnumerable<Convertions>? getConvertionsForMonth(int userId, int month)
+        {
+            int currentYear = DateTime.UtcNow.Year;
+
+            return _context.Convertions
+                .Include(c => c.User)
+                .Include(c => c.FromCurrency)
+                .Include(c => c.ToCurrency)
+                .Where(c => c.User.Id == userId && c.Date.Month == month && c.Date.Year == currentYear)
+                .ToList();
+        }
+
     }
 }

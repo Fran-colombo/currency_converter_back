@@ -9,5 +9,6 @@ namespace Services.Interfaces
         bool canConvert(int userId);
         string? MakeConvertion(int userId, MakeConvertionDto conv);
         IEnumerable<ConvertionToShowDto>? getUserConvertionsForMonth(string username, int month);
+        IEnumerable<ConvertionToShowDto>? getUserConvertionsForMonth(int userId, int month);
     }
 }
