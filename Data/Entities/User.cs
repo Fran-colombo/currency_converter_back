@@ -13,16 +13,16 @@ namespace Data.Entities
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [Required]
+        //[Required]
         public string Username { get; set; }
-        [Required]
+        //[Required]
         public string Password { get; set; }
-        [Required]
-        [Compare("Password")]
+        //[Required]
+        //[Compare("Password")]
         public string confirmPassword { get; set; }
 
-        [Required]
-        [EmailAddress]
+        //[Required]
+        //[EmailAddress]
         public string Email {  get; set; }
         public int SubscriptionId {  get; set; }
         [ForeignKey("SubscriptionId")]

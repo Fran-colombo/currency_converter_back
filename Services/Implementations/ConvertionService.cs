@@ -63,13 +63,13 @@ namespace Services.Implementations
             }
         }
 
-        public IEnumerable<ConvertionToShowDto>? getUserConvertionsForMonth(string username, int month)
+        public IEnumerable<ConvertionToShowDto>? getUserConvertionsForMonth(string username, int month, int year)
         {
-            if (1 <= month && month <= 12)
+            if ((1 <= month && month <= 12) && (year <= DateTime.UtcNow.Year && year >= 2000))
             {
                 try
                 {
-                    var convertions = _repository.getConvertionsForMonth(username, month);
+                    var convertions = _repository.getConvertionsForMonth(username, month, year);
                     if (convertions != null)
                     {
                         List<ConvertionToShowDto> convertionList = new List<ConvertionToShowDto>();
@@ -100,20 +100,23 @@ namespace Services.Implementations
                     throw new NotAbleGetUserConvertions("We could not get the historial of convertions");
                 }
             }
-            else
+            else if (year >= DateTime.UtcNow.Year && year <= 0)
+            {
+                throw new Exception("You must use an available year");
+            }
             {
                 throw new Exception("You only have 12 month, come on, you are betten than this");
             }
             
         }
 
-        public IEnumerable<ConvertionToShowDto>? getUserConvertionsForMonth(int userId, int month)
+        public IEnumerable<ConvertionToShowDto>? getUserConvertionsForMonth(int userId, int month, int year)
         {
-            if (1 <= month && month <= 12)
+            if ((1 <= month && month <= 12) && (year <= DateTime.UtcNow.Year && year >= 2000))
             {
                 try
                 {
-                    var convertions = _repository.getConvertionsForMonth(userId, month);
+                    var convertions = _repository.getConvertionsForMonth(userId, month, year);
                     if (convertions != null)
                     {
                         List<ConvertionToShowDto> convertionList = new List<ConvertionToShowDto>();
@@ -143,6 +146,10 @@ namespace Services.Implementations
                 {
                     throw new NotAbleGetUserConvertions("We could not get the historial of convertions");
                 }
+            }
+            else if(year >= DateTime.UtcNow.Year && year <= 2000)
+            {
+                throw new Exception("You must use an available year");
             }
             else
             {
@@ -211,7 +218,7 @@ namespace Services.Implementations
                         {
                             _repository.AddConversion(newConversion);
 
-                            return targetCurrency.Symbol + convertedOutput;
+                            return targetCurrency.Symbol + " " + convertedOutput;
                         }
                     }
 

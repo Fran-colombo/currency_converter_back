@@ -3,28 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2F4B8EA6-E122-4202-BABF-89686E4070B2}|Currency_converter\\Currency_converter.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\currency_converter\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F4B8EA6-E122-4202-BABF-89686E4070B2}|Currency_converter\\Currency_converter.csproj|solutionrelative:currency_converter\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2F4B8EA6-E122-4202-BABF-89686E4070B2}|Currency_converter\\Currency_converter.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\currency_converter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F4B8EA6-E122-4202-BABF-89686E4070B2}|Currency_converter\\Currency_converter.csproj|solutionrelative:currency_converter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99DFDD5F-338B-446D-BF45-EFC7C7DB1CD2}|Services\\Services.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\services\\implementations\\convertionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99DFDD5F-338B-446D-BF45-EFC7C7DB1CD2}|Services\\Services.csproj|solutionrelative:services\\implementations\\convertionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2F4B8EA6-E122-4202-BABF-89686E4070B2}|Currency_converter\\Currency_converter.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\currency_converter\\controllers\\authenticatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F4B8EA6-E122-4202-BABF-89686E4070B2}|Currency_converter\\Currency_converter.csproj|solutionrelative:currency_converter\\controllers\\authenticatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|solutionrelative:data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0132884B-16F5-41FB-8240-94C62AC17FFE}|Common\\Common.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\common\\models\\userforcreationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0132884B-16F5-41FB-8240-94C62AC17FFE}|Common\\Common.csproj|solutionrelative:common\\models\\userforcreationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\data\\entities\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|solutionrelative:data\\entities\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\data\\entities\\currency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|solutionrelative:data\\entities\\currency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\data\\currencycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|solutionrelative:data\\currencycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\data\\entities\\convertions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|solutionrelative:data\\entities\\convertions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\data\\currencycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|solutionrelative:data\\currencycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99DFDD5F-338B-446D-BF45-EFC7C7DB1CD2}|Services\\Services.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\services\\implementations\\convertionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99DFDD5F-338B-446D-BF45-EFC7C7DB1CD2}|Services\\Services.csproj|solutionrelative:services\\implementations\\convertionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0132884B-16F5-41FB-8240-94C62AC17FFE}|Common\\Common.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\common\\models\\convertiontoshowdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0132884B-16F5-41FB-8240-94C62AC17FFE}|Common\\Common.csproj|solutionrelative:common\\models\\convertiontoshowdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2F4B8EA6-E122-4202-BABF-89686E4070B2}|Currency_converter\\Currency_converter.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\currency_converter\\controllers\\convertioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2F4B8EA6-E122-4202-BABF-89686E4070B2}|Currency_converter\\Currency_converter.csproj|solutionrelative:currency_converter\\controllers\\convertioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F4B8EA6-E122-4202-BABF-89686E4070B2}|Currency_converter\\Currency_converter.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\currency_converter\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F4B8EA6-E122-4202-BABF-89686E4070B2}|Currency_converter\\Currency_converter.csproj|solutionrelative:currency_converter\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0132884B-16F5-41FB-8240-94C62AC17FFE}|Common\\Common.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\common\\models\\userconversionfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0132884B-16F5-41FB-8240-94C62AC17FFE}|Common\\Common.csproj|solutionrelative:common\\models\\userconversionfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\data\\repositories\\implementations\\convertionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|solutionrelative:data\\repositories\\implementations\\convertionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99DFDD5F-338B-446D-BF45-EFC7C7DB1CD2}|Services\\Services.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\services\\interfaces\\iconvertionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\data\\repositories\\interfaces\\iconvertionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|solutionrelative:data\\repositories\\interfaces\\iconvertionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\data\\repositories\\implementations\\convertionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|solutionrelative:data\\repositories\\implementations\\convertionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99DFDD5F-338B-446D-BF45-EFC7C7DB1CD2}|Services\\Services.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\services\\implementations\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -111,32 +139,12 @@
       "RelativeMoniker": "D:0:0:{0132884B-16F5-41FB-8240-94C62AC17FFE}|Common\\Common.csproj|solutionrelative:common\\models\\makeconvertiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0132884B-16F5-41FB-8240-94C62AC17FFE}|Common\\Common.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\common\\models\\convertiontoshowdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0132884B-16F5-41FB-8240-94C62AC17FFE}|Common\\Common.csproj|solutionrelative:common\\models\\convertiontoshowdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|solutionrelative:data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0132884B-16F5-41FB-8240-94C62AC17FFE}|Common\\Common.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\common\\exceptions\\userexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0132884B-16F5-41FB-8240-94C62AC17FFE}|Common\\Common.csproj|solutionrelative:common\\exceptions\\userexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F4B8EA6-E122-4202-BABF-89686E4070B2}|Currency_converter\\Currency_converter.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\currency_converter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F4B8EA6-E122-4202-BABF-89686E4070B2}|Currency_converter\\Currency_converter.csproj|solutionrelative:currency_converter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0132884B-16F5-41FB-8240-94C62AC17FFE}|Common\\Common.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\common\\models\\currencyupdaterequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0132884B-16F5-41FB-8240-94C62AC17FFE}|Common\\Common.csproj|solutionrelative:common\\models\\currencyupdaterequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F4B8EA6-E122-4202-BABF-89686E4070B2}|Currency_converter\\Currency_converter.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\currency_converter\\controllers\\authenticatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F4B8EA6-E122-4202-BABF-89686E4070B2}|Currency_converter\\Currency_converter.csproj|solutionrelative:currency_converter\\controllers\\authenticatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0132884B-16F5-41FB-8240-94C62AC17FFE}|Common\\Common.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\common\\models\\userforcreationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0132884B-16F5-41FB-8240-94C62AC17FFE}|Common\\Common.csproj|solutionrelative:common\\models\\userforcreationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0132884B-16F5-41FB-8240-94C62AC17FFE}|Common\\Common.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\common\\models\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -157,10 +165,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{99DFDD5F-338B-446D-BF45-EFC7C7DB1CD2}|Services\\Services.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\services\\interfaces\\isubscriptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99DFDD5F-338B-446D-BF45-EFC7C7DB1CD2}|Services\\Services.csproj|solutionrelative:services\\interfaces\\isubscriptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\data\\entities\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22E85447-F6A3-40AC-A8DF-1BC0E329B235}|Data\\Data.csproj|solutionrelative:data\\entities\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0132884B-16F5-41FB-8240-94C62AC17FFE}|Common\\Common.csproj|c:\\users\\francesco\\source\\repos\\proyectofinal\\currency_converter_back\\common\\models\\credentialstoauthenticatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -204,7 +208,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -231,80 +235,58 @@
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ConvertionService.cs",
-              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Services\\Implementations\\ConvertionService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\ConvertionService.cs",
-              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Services\\Implementations\\ConvertionService.cs",
-              "RelativeToolTip": "Services\\Implementations\\ConvertionService.cs",
-              "ViewState": "AgIAANkAAAAAAAAAAAAYwOgAAABcAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Convertions.cs",
+              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Entities\\Convertions.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\Convertions.cs",
+              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Entities\\Convertions.cs",
+              "RelativeToolTip": "Data\\Entities\\Convertions.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAnwA4AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T02:00:01.538Z",
+              "WhenOpened": "2024-12-11T01:35:53.461Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "CurrencyContext.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\CurrencyContext.cs",
               "RelativeDocumentMoniker": "Data\\CurrencyContext.cs",
               "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\CurrencyContext.cs",
               "RelativeToolTip": "Data\\CurrencyContext.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T23:38:26.09Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ConvertionToShowDto.cs",
+              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Models\\ConvertionToShowDto.cs",
+              "RelativeDocumentMoniker": "Common\\Models\\ConvertionToShowDto.cs",
+              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Models\\ConvertionToShowDto.cs",
+              "RelativeToolTip": "Common\\Models\\ConvertionToShowDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwA4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T02:57:18.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Services\\Implementations\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\UserService.cs",
+              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Services\\Implementations\\UserService.cs",
+              "RelativeToolTip": "Services\\Implementations\\UserService.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAQwHIAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T02:54:02.259Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ConvertionController.cs",
-              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Currency_converter\\Controllers\\ConvertionController.cs",
-              "RelativeDocumentMoniker": "Currency_converter\\Controllers\\ConvertionController.cs",
-              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Currency_converter\\Controllers\\ConvertionController.cs",
-              "RelativeToolTip": "Currency_converter\\Controllers\\ConvertionController.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAswEQAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T02:21:13.626Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Currency_converter\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Currency_converter\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Currency_converter\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Currency_converter\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAIwHkAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T17:23:59.238Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Services.csproj",
-              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Services\\Services.csproj",
-              "RelativeDocumentMoniker": "Services\\Services.csproj",
-              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Services\\Services.csproj",
-              "RelativeToolTip": "Services\\Services.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-01T21:06:15.868Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Currency.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Entities\\Currency.cs",
               "RelativeDocumentMoniker": "Data\\Entities\\Currency.cs",
@@ -317,71 +299,176 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Services\\Implementations\\UserService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\UserService.cs",
-              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Services\\Implementations\\UserService.cs",
-              "RelativeToolTip": "Services\\Implementations\\UserService.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAQwHIAAABeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T02:54:02.259Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Convertions.cs",
-              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Entities\\Convertions.cs",
-              "RelativeDocumentMoniker": "Data\\Entities\\Convertions.cs",
-              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Entities\\Convertions.cs",
-              "RelativeToolTip": "Data\\Entities\\Convertions.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAgwA8AAAAyAAAAAAAAAA==",
+              "Title": "Subscription.cs",
+              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Entities\\Subscription.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\Subscription.cs",
+              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Entities\\Subscription.cs",
+              "RelativeToolTip": "Data\\Entities\\Subscription.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T01:35:53.461Z",
+              "WhenOpened": "2024-11-01T20:48:40.347Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ConvertionsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Repositories\\Implementations\\ConvertionsRepository.cs",
-              "RelativeDocumentMoniker": "Data\\Repositories\\Implementations\\ConvertionsRepository.cs",
-              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Repositories\\Implementations\\ConvertionsRepository.cs",
-              "RelativeToolTip": "Data\\Repositories\\Implementations\\ConvertionsRepository.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAYwEQAAAAsAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Entities\\User.cs",
+              "RelativeToolTip": "Data\\Entities\\User.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T01:47:35.761Z",
+              "WhenOpened": "2024-11-01T20:21:43.988Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Currency_converter\\Program.cs",
+              "RelativeDocumentMoniker": "Currency_converter\\Program.cs",
+              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Currency_converter\\Program.cs",
+              "RelativeToolTip": "Currency_converter\\Program.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAIwGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T23:57:01.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserForCreationDto.cs",
+              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Models\\UserForCreationDto.cs",
+              "RelativeDocumentMoniker": "Common\\Models\\UserForCreationDto.cs",
+              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Models\\UserForCreationDto.cs",
+              "RelativeToolTip": "Common\\Models\\UserForCreationDto.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAUwBEAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T21:09:04.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthenticateController.cs",
+              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Currency_converter\\Controllers\\AuthenticateController.cs",
+              "RelativeDocumentMoniker": "Currency_converter\\Controllers\\AuthenticateController.cs",
+              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Currency_converter\\Controllers\\AuthenticateController.cs",
+              "RelativeToolTip": "Currency_converter\\Controllers\\AuthenticateController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAA5wCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T17:25:16.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ConvertionController.cs",
+              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Currency_converter\\Controllers\\ConvertionController.cs",
+              "RelativeDocumentMoniker": "Currency_converter\\Controllers\\ConvertionController.cs",
+              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Currency_converter\\Controllers\\ConvertionController.cs",
+              "RelativeToolTip": "Currency_converter\\Controllers\\ConvertionController.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAYwF4AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T02:21:13.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "IConvertionService.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Services\\Interfaces\\IConvertionService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IConvertionService.cs",
               "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Services\\Interfaces\\IConvertionService.cs",
               "RelativeToolTip": "Services\\Interfaces\\IConvertionService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAABcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T02:32:26.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T02:32:26.516Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
+              "Title": "ConvertionService.cs",
+              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Services\\Implementations\\ConvertionService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\ConvertionService.cs",
+              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Services\\Implementations\\ConvertionService.cs",
+              "RelativeToolTip": "Services\\Implementations\\ConvertionService.cs",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAswNwAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T02:00:01.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "IConvertionsRepository.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Repositories\\Interfaces\\IConvertionsRepository.cs",
               "RelativeDocumentMoniker": "Data\\Repositories\\Interfaces\\IConvertionsRepository.cs",
               "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Repositories\\Interfaces\\IConvertionsRepository.cs",
               "RelativeToolTip": "Data\\Repositories\\Interfaces\\IConvertionsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T02:54:15.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T02:54:15.381Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
+              "Title": "ConvertionsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Repositories\\Implementations\\ConvertionsRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Implementations\\ConvertionsRepository.cs",
+              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Repositories\\Implementations\\ConvertionsRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Implementations\\ConvertionsRepository.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAwEMAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T01:47:35.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Currency_converter\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Currency_converter\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Currency_converter\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Currency_converter\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAIwHkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T17:23:59.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserConversionFilterDto.cs",
+              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Models\\UserConversionFilterDto.cs",
+              "RelativeDocumentMoniker": "Common\\Models\\UserConversionFilterDto.cs",
+              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Models\\UserConversionFilterDto.cs",
+              "RelativeToolTip": "Common\\Models\\UserConversionFilterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T20:05:29.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Services.csproj",
+              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Services\\Services.csproj",
+              "RelativeDocumentMoniker": "Services\\Services.csproj",
+              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Services\\Services.csproj",
+              "RelativeToolTip": "Services\\Services.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-01T21:06:15.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "ICurrencyService.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Services\\Interfaces\\ICurrencyService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\ICurrencyService.cs",
@@ -393,7 +480,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Services\\Interfaces\\IUserService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IUserService.cs",
@@ -405,7 +492,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "CurrencyService.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Services\\Implementations\\CurrencyService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\CurrencyService.cs",
@@ -417,7 +504,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "ISubscriptionRepository.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Repositories\\Interfaces\\ISubscriptionRepository.cs",
               "RelativeDocumentMoniker": "Data\\Repositories\\Interfaces\\ISubscriptionRepository.cs",
@@ -429,7 +516,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Repositories\\Interfaces\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Data\\Repositories\\Interfaces\\IUserRepository.cs",
@@ -441,7 +528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Repositories\\Implementations\\UserRepository.cs",
               "RelativeDocumentMoniker": "Data\\Repositories\\Implementations\\UserRepository.cs",
@@ -453,7 +540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "SubscriptionService.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Services\\Implementations\\SubscriptionService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\SubscriptionService.cs",
@@ -465,7 +552,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "SubscriptionRepository.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Repositories\\Implementations\\SubscriptionRepository.cs",
               "RelativeDocumentMoniker": "Data\\Repositories\\Implementations\\SubscriptionRepository.cs",
@@ -477,7 +564,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "SubscriptionController.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Currency_converter\\Controllers\\SubscriptionController.cs",
               "RelativeDocumentMoniker": "Currency_converter\\Controllers\\SubscriptionController.cs",
@@ -489,7 +576,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "CurrencyForDto.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Models\\CurrencyForDto.cs",
               "RelativeDocumentMoniker": "Common\\Models\\CurrencyForDto.cs",
@@ -501,7 +588,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "CurrencyController.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Currency_converter\\Controllers\\CurrencyController.cs",
               "RelativeDocumentMoniker": "Currency_converter\\Controllers\\CurrencyController.cs",
@@ -513,7 +600,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "ICurrencyRepository.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Repositories\\Interfaces\\ICurrencyRepository.cs",
               "RelativeDocumentMoniker": "Data\\Repositories\\Interfaces\\ICurrencyRepository.cs",
@@ -525,7 +612,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "CurrencyException.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Exceptions\\CurrencyException.cs",
               "RelativeDocumentMoniker": "Common\\Exceptions\\CurrencyException.cs",
@@ -537,7 +624,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "CurrencyRepository.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Repositories\\Implementations\\CurrencyRepository.cs",
               "RelativeDocumentMoniker": "Data\\Repositories\\Implementations\\CurrencyRepository.cs",
@@ -549,7 +636,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "20241213211107_ojalaseterminemivida3.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Migrations\\20241213211107_ojalaseterminemivida3.cs",
               "RelativeDocumentMoniker": "Data\\Migrations\\20241213211107_ojalaseterminemivida3.cs",
@@ -561,7 +648,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 32,
               "Title": "ConvertionException.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Exceptions\\ConvertionException.cs",
               "RelativeDocumentMoniker": "Common\\Exceptions\\ConvertionException.cs",
@@ -573,7 +660,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 33,
               "Title": "MakeConvertionDto.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Models\\MakeConvertionDto.cs",
               "RelativeDocumentMoniker": "Common\\Models\\MakeConvertionDto.cs",
@@ -585,31 +672,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "Data\\Entities\\User.cs",
-              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Entities\\User.cs",
-              "RelativeToolTip": "Data\\Entities\\User.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowB4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T20:21:43.988Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ConvertionToShowDto.cs",
-              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Models\\ConvertionToShowDto.cs",
-              "RelativeDocumentMoniker": "Common\\Models\\ConvertionToShowDto.cs",
-              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Models\\ConvertionToShowDto.cs",
-              "RelativeToolTip": "Common\\Models\\ConvertionToShowDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T02:57:18.012Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 34,
               "Title": "UserExceptions.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Exceptions\\UserExceptions.cs",
               "RelativeDocumentMoniker": "Common\\Exceptions\\UserExceptions.cs",
@@ -621,19 +684,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Currency_converter\\Program.cs",
-              "RelativeDocumentMoniker": "Currency_converter\\Program.cs",
-              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Currency_converter\\Program.cs",
-              "RelativeToolTip": "Currency_converter\\Program.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAIwEkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T23:57:01.893Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "CurrencyUpdateRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Models\\CurrencyUpdateRequestDto.cs",
               "RelativeDocumentMoniker": "Common\\Models\\CurrencyUpdateRequestDto.cs",
@@ -645,19 +696,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "UserForCreationDto.cs",
-              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Models\\UserForCreationDto.cs",
-              "RelativeDocumentMoniker": "Common\\Models\\UserForCreationDto.cs",
-              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Models\\UserForCreationDto.cs",
-              "RelativeToolTip": "Common\\Models\\UserForCreationDto.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAUwBEAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T21:09:04.293Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "UserDto.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Models\\UserDto.cs",
               "RelativeDocumentMoniker": "Common\\Models\\UserDto.cs",
@@ -669,7 +708,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "SubscriptionDto.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Models\\SubscriptionDto.cs",
               "RelativeDocumentMoniker": "Common\\Models\\SubscriptionDto.cs",
@@ -681,19 +720,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "AuthenticateController.cs",
-              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Currency_converter\\Controllers\\AuthenticateController.cs",
-              "RelativeDocumentMoniker": "Currency_converter\\Controllers\\AuthenticateController.cs",
-              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Currency_converter\\Controllers\\AuthenticateController.cs",
-              "RelativeToolTip": "Currency_converter\\Controllers\\AuthenticateController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowCgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T17:25:16.343Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "ISubscriptionService.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Services\\Interfaces\\ISubscriptionService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\ISubscriptionService.cs",
@@ -705,7 +732,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "Common.csproj",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Common.csproj",
               "RelativeDocumentMoniker": "Common\\Common.csproj",
@@ -717,7 +744,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "SubscriptionExceptions.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Exceptions\\SubscriptionExceptions.cs",
               "RelativeDocumentMoniker": "Common\\Exceptions\\SubscriptionExceptions.cs",
@@ -729,19 +756,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "Subscription.cs",
-              "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Entities\\Subscription.cs",
-              "RelativeDocumentMoniker": "Data\\Entities\\Subscription.cs",
-              "ToolTip": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Entities\\Subscription.cs",
-              "RelativeToolTip": "Data\\Entities\\Subscription.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T20:48:40.347Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "CredentialsToAuthenticateDto.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Models\\CredentialsToAuthenticateDto.cs",
               "RelativeDocumentMoniker": "Common\\Models\\CredentialsToAuthenticateDto.cs",
@@ -753,7 +768,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "Currency_converter.http",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Currency_converter\\Currency_converter.http",
               "RelativeDocumentMoniker": "Currency_converter\\Currency_converter.http",
@@ -765,7 +780,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "UserRole.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Enum\\UserRole.cs",
               "RelativeDocumentMoniker": "Common\\Enum\\UserRole.cs",
@@ -777,7 +792,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "20241110194730_initialCommit.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\Currency_converter\\Data\\Migrations\\20241110194730_initialCommit.cs",
               "RelativeDocumentMoniker": "..\\..\\Currency_converter\\Data\\Migrations\\20241110194730_initialCommit.cs",
@@ -788,7 +803,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "SubscriptionType.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Common\\Enum\\SubscriptionType.cs",
               "RelativeDocumentMoniker": "Common\\Enum\\SubscriptionType.cs",
@@ -800,7 +815,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "20241109204610_initialCommit.cs",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\Currency_converter\\Data\\Migrations\\20241109204610_initialCommit.cs",
               "RelativeDocumentMoniker": "..\\..\\Currency_converter\\Data\\Migrations\\20241109204610_initialCommit.cs",
@@ -811,7 +826,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Currency_converter\\appsettings.json",
               "RelativeDocumentMoniker": "Currency_converter\\appsettings.json",
@@ -823,7 +838,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "Data.csproj",
               "DocumentMoniker": "C:\\Users\\Francesco\\source\\repos\\ProyectoFinal\\Currency_converter_back\\Data\\Data.csproj",
               "RelativeDocumentMoniker": "Data\\Data.csproj",

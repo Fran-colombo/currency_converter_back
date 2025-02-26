@@ -21,13 +21,14 @@ namespace Currency_converter.Controllers
 
         [HttpGet]
         [Authorize]
-        public IActionResult GetUserConvertions([FromQuery] int? month = null)
+        public IActionResult GetUserConvertions([FromQuery] int? month = null, [FromQuery] int? year = null)
         {
             int userId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value ?? "");
             int selectedMonth = month ?? DateTime.Now.Month; // si no recibe el mes asigna el mes actual
+            int selectedYear = year ?? DateTime.Now.Year;
             try
             {
-                return Ok(_service.getUserConvertionsForMonth(userId, selectedMonth));
+                return Ok(_service.getUserConvertionsForMonth(userId, selectedMonth, selectedYear));
             }
             catch (Exception ex) {
                 throw new NotAbleGetUserConvertions("We couldn´t get your convertions");
@@ -58,15 +59,16 @@ namespace Currency_converter.Controllers
 
         [HttpGet("user/{username}")]
         [Authorize(Roles = "Admin")]
-        public IActionResult GetUserConvertionsF([FromRoute] string username, [FromQuery] int? month = null)
+        public IActionResult GetUserConvertionsF([FromRoute] string username, [FromQuery] int? month = null, [FromQuery] int? year = null)
         {
             int selectedMonth = month ?? DateTime.Now.Month;
+            int selectedYear = year ?? DateTime.Now.Year;
             try
             {
                 var user = _userService.GetUserByUsername(username);
                 if (user != null)
                 {
-                    return Ok(_service.getUserConvertionsForMonth(username, selectedMonth));
+                    return Ok(_service.getUserConvertionsForMonth(username, selectedMonth, selectedYear));
                 }
                 else
                 {

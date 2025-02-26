@@ -54,27 +54,26 @@ namespace Data.Repositories.Implementations
                 .Where(c=> c.Date.Month == currentMonth && c.Date.Year == currentYear)
                 .Count();    
         }
-        public IEnumerable<Convertions>? getConvertionsForMonth(string username, int month)
+        public IEnumerable<Convertions>? getConvertionsForMonth(string username, int month, int year)
         {
-            int currentYear = DateTime.UtcNow.Year;
 
             return _context.Convertions
                 .Include(c => c.User)
                 .Include(c => c.FromCurrency)
                 .Include(c => c.ToCurrency)
-                .Where(c => c.User.Username== username && c.Date.Month == month && c.Date.Year == currentYear)
+                .Where(c => c.User.Username== username && c.Date.Month == month && c.Date.Year == year)
                 .ToList();
         }
 
-        public IEnumerable<Convertions>? getConvertionsForMonth(int userId, int month)
+        public IEnumerable<Convertions>? getConvertionsForMonth(int userId, int month, int year)
         {
-            int currentYear = DateTime.UtcNow.Year;
+            //int currentYear = DateTime.UtcNow.Year;
 
             return _context.Convertions
                 .Include(c => c.User)
                 .Include(c => c.FromCurrency)
                 .Include(c => c.ToCurrency)
-                .Where(c => c.User.Id == userId && c.Date.Month == month && c.Date.Year == currentYear)
+                .Where(c => c.User.Id == userId && c.Date.Month == month && c.Date.Year == year)
                 .ToList();
         }
 
